@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/*"
+    "tutos/*"
   ],
   "version": "0.0.0"
 }
