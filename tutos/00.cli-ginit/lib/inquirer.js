@@ -34,15 +34,15 @@ module.exports = {
   },
 
   askRepoDetails: () => {
-    // const agrv = require("minimist")(process.argv.slice(2));
+    const argv = require("minimist")(process.argv.slice(2));
 
     const questions = [
       {
         type: "input",
         name: "name",
         message: "Enter a name for the repository",
-        // default: argv._[0] || files.getCurrentDirectoryBase(),
-        default: files.getCurrentDirectoryBase(),
+        default: argv._[0] || files.getCurrentDirectoryBase(),
+        // default: files.getCurrentDirectoryBase(),
         validate: function(value) {
           if (value.length) {
             return true;
@@ -54,8 +54,8 @@ module.exports = {
       {
         type: "input",
         name: "description",
-        default: null,
-        // default: argv._[1] || null,
+        default: argv._[1] || null,
+        // default: null,
         message: "Optionally enter a description of the repository"
       },
       {
@@ -64,6 +64,20 @@ module.exports = {
         message: "Public or private",
         choices: ["public", "private"],
         default: "public"
+      }
+    ];
+
+    return inquirer.prompt(questions);
+  },
+
+  askIgnoreFiles: filesList => {
+    const questions = [
+      {
+        type: "checkbox",
+        name: "ignore",
+        messages: "Select the files and/or folders you wish to ignore:",
+        choices: filesList,
+        default: ["node_modules", "bower_components"]
       }
     ];
 

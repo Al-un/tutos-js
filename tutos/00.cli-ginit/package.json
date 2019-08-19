@@ -1,10 +1,13 @@
 {
-  "name": "ginit",
+  "name": "@al-un/ginit",
   "version": "1.0.0",
-  "description": "\"git init\" on steroids",
+  "description": "\"git init\" on steroids (testing tutorial)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
+  },
+  "bin": {
+    "gitinit": "./index.js"
   },
   "keywords": [
     "Node.js",

@@ -17,7 +17,7 @@ module.exports = {
     return octokit;
   },
 
-  loadToken(token) {
+  githubAuth(token) {
     octokit = new Octokit({ auth: token });
   },
 
