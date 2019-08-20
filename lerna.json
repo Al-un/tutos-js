@@ -1,6 +1,4 @@
 {
-  "packages": [
-    "tutos/*"
-  ],
+  "packages": ["angular/*", "js/*", "nodejs/*", "react/*", "vue/*"],
   "version": "0.0.0"
 }

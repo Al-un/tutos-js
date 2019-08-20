@@ -1,5 +1,5 @@
 {
-  "name": "@al-un/ginit",
+  "name": "@al-un/tutojs-ginit",
   "version": "1.0.0",
   "description": "\"git init\" on steroids (testing tutorial)",
   "main": "index.js",
