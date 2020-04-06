@@ -24,7 +24,7 @@
     "figlet": "^1.2.3",
     "inquirer": "^6.5.0",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "simple-git": "^1.124.0",
     "touch": "^3.1.0"
   }
